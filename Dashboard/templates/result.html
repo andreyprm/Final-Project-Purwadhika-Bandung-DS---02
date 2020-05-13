@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <style>
+    body {
+    background-color:#D9F9EF;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    </style>
+    <div style="margin-top: 30px;">
+        <center>
+            <img src="https://assets.website-files.com/5bff8886c3964a992e90d465/5c00fa0eb8b0816e1a10dfe6_hero-2.svg">
+            <h4 style="margin-top: 15px; color: darkslategray"; >Your data is classified as : {{(hasil_prediction)}} </h4>
+            <h5 style="margin-top: 15px; color: orangered";> Note : <br>1 = Yes - Employee tends to leave the company.<br> 0 = No - Employee tends to stay with the company.</h5>
+        </center>
+    </div>
+{% endblock body %}    

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<body bgcolor="E4E3E8">
+    <style>
+        body {
+        background-color:#D9F9EF;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+    <h2>Dataset Attrition</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    {% for item in data.columns %}
+                        <th>{{item}}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for index,item in data.iterrows() %}
+                    <tr>
+                        {% for col in item %}
+                        <td> {{col}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</body>
+{% endblock body%}

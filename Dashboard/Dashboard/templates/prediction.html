@@ -1,0 +1,171 @@
+{% extends 'layout.html'%}
+{% block body %}
+<html>
+    <head>
+        <style>
+            body {
+            background-color:#D9F9EF;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+            </style>        
+    </head>
+    <body>
+        <div class="white-box px-4"></div>
+        <center>
+            <h3 style="margin-top: 40px; margin-left: 60px; color: darkslategray"><span>HR - Employee Attrition Predictor</span></h3>
+            <h6 style="margin-top: 10px; margin-left: 60px; color:  darkslategray"><span>Fill this from to input data</span></h6>
+        </center>    
+        
+        </div>
+        <div style="padding-top: 5px; padding-left: 50px;" class="container" >
+            <div class="col md-9 mt-3">
+                    <div class="grey-region px-4">
+                        <form action="/" method="POST">
+                            <div class="form-group">
+                            <!--Business Travel-->
+                            <select class="form-control form-control-sm mt-2" name="BusinessTravel">
+                                <option value="" disabled selected>Bussiness Travel</option>
+                                {% for item in data_travel %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+                            <!--Department-->
+                            <select class="form-control form-control-sm mt-2" name="Department">
+                                <option value="" disabled selected>Department</option>
+                                {% for item in data_department %}
+                                    <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <div class="form-group">
+
+                            <!--Education-->
+                            <select class="form-control form-control-sm mt-2" name="Education">
+                                <option value="" disabled selected>Education Level</option>
+                                {% for item in data_edu %}
+                                    <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+                            <!--EducationField-->
+                            <select class="form-control form-control-sm mt-2" name="EducationField">
+                                <option value="" disabled selected>Education Field</option>
+                                {% for item in data_eduField %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <div class="form-group">
+
+                            <!--Gender-->
+                            <select class="form-control form-control-sm mt-2" name="Gender">
+                                <option value="" disabled selected>Gender</option>
+                                {% for item in data_gender %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+                            <!--JobLevel-->
+                            <select class="form-control form-control-sm mt-2" name="JobLevel">
+                                <option value="" disabled selected>Job Level</option>
+                                {% for item in data_jobLevel %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <div class="form-group">
+
+                            <!--JobRole-->
+                            <select class="form-control form-control-sm mt-2" name="JobRole">
+                                <option value="" disabled selected>Job Role</option>
+                                {% for item in data_jobRole %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+                            <!--Marital-->
+                            <select class="form-control form-control-sm mt-2" name="MaritalStatus">
+                                <option value="" disabled selected>Marital Status</option>
+                                {% for item in data_marital %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <!--Age-->
+                            <input type="number" name="Age" max="100" min="0" placeholder = "Age" class="form-control form-control-sm mt-2">
+                            <!--DistanceFromHome-->
+                            <input type="number" name="DistanceFromHome" placeholder = "Distance From Home" class="form-control form-control-sm mt-2">
+                            <!--MonthlyIncome-->
+                            <input type="number" name="MonthlyIncome" placeholder = "Monthly Income (in Rupee)" class="form-control  form-control-sm mt-2">
+                            <!--NumCompaniesWorked-->
+                            <input type="number" name="NumCompaniesWorked" max="10" min="0"placeholder = "Number of Companies Worked" class="form-control  form-control-sm mt-2">
+                            <!--PercentSalaryHike-->
+                            <input type="number" name="PercentSalaryHike" max="100" min="0" placeholder = "Percent Salary Hike (in %)" class="form-control  form-control-sm mt-2">
+                            <!--TotalWorkingYears-->
+                            <input type="number" name="TotalWorkingYears" max="75" min="0"placeholder = "Total Working Years" class="form-control  form-control-sm mt-2">
+                            <!--TrainingTimesLastYear-->
+                            <input type="number" name="TrainingTimesLastYear" max="10" min="0"placeholder = "Frequncy of Training Times Last Year" class="form-control  form-control-sm mt-2">
+                            <!--YearsAtCompany-->
+                            <input type="number" name="YearsAtCompany" max="75" min="0" placeholder = "Years at Company" class="form-control  form-control-sm mt-2">
+                            <!--YearsSinceLastPromotion-->
+                            <input type="number" name="YearsSinceLastPromotion" max="30" min="0" placeholder = "Years Since Last Promotion" class="form-control  form-control-sm mt-2">
+                            <!--YearsWithCurrManager-->
+                            <input type="number" name="YearsWithCurrManager" max="30" min="0" placeholder = "Years with Current Manager" class="form-control  form-control-sm mt-2">
+                            <!--Absence-->
+                            <input type="number" name="Absence"  max="40" min="0" placeholder = "Total Absence this Year(in days)" class="form-control  form-control-sm mt-2">
+                        
+                            <div class="form-group">
+
+                            <!--EnvironmentSatisfaction-->
+                            <select name="EnvironmentSatisfaction" class="form-control form-control-sm mt-2">
+                                <option value="" disabled selected>Environment Satisfaction</option>
+                                {% for item in data_environment %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+                            <!--JobSatisfaction-->
+                            <select name="JobSatisfaction" class="form-control form-control-sm mt-2">
+                                <option value="" disabled selected>Job Satisfaction</option>
+                                {% for item in data_satisf %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+
+                            <div class="form-group">
+
+                            <!--WorkLifeBalance-->
+                            <select name="WorkLifeBalance" class="form-control form-control-sm mt-2">
+                                <option value="" disabled selected>Work Life Balance</option>
+                                {% for item in data_worklife %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+                            <!--Job Involvement-->
+                            <select name="JobInvolvement" class="form-control form-control-sm mt-2">
+                                <option value="" disabled selected>Job Involvement</option>
+                                {% for item in data_jobinvolve %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+                            <div class="form-group">
+
+                            <!--PerformanceRating-->
+                            <select name="PerformanceRating" class="form-control form-control-sm mt-2">
+                                <option value="" disabled selected>Performance Rating</option>
+                                {% for item in data_performance %}
+                                <option value="{{item}}">{{item}}</option>
+                                {% endfor %}
+                            </select>
+                            <center>
+                                <button type="submit" class="btn btn-success mt-3">Predict</button>
+                            </center>
+                            
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {% endblock body %}
+    </body>
+</html>

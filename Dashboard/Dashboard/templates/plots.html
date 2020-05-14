@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% block body%}
+<head>
+    <style>
+        body {
+        background-color:#D9F9EF;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <center> 
+    <p class="font-weight-bold">Data Visualizations</p>    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>    
+    </center>
+
+    <center>
+    <div style="margin-top: 50px; justify-content: center;" class="row">
+        <div class="col-md-8"> 
+                <p style="font-size: medium;"><b>Scatter Plot Monthly Income v. Years at Company</b></p>
+            <div class="chart mt-0" id="scatter"></div>        
+        </div>
+    </div>
+    <div style="margin-top: 100px; justify-content: center;" class="row">
+        <div class="col-md-8"> 
+                <p style="font-size: medium;"><b>Attrition Count Plot</b></p>
+            <div class="chart mt-0" id="hist"></div>        
+        </div>
+    </div>
+    
+    <script>
+        var scatter = {{ plot_1 | safe }}
+        var hist = {{ plot_2 | safe }}
+        Plotly.plot('scatter',scatter,{})
+        Plotly.plot('hist',hist,{})
+    </script>
+    </center>
+</body>     
+{% endblock body %}

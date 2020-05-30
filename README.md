@@ -31,10 +31,10 @@ I search teh best parameter for this model using GridSearchCV. The parameter i u
 * 'n_estimators':[50,100,200]}
 
 the best parameters are :
-{'class_weight': {0: 1, 1: 2},
- 'min_samples_leaf': 1,
- 'min_samples_split': 2,
- 'n_estimators': 200}
+* 'class_weight': {0: 1, 1: 2}
+* 'min_samples_leaf': 1
+* 'min_samples_split': 2
+* 'n_estimators': 200
 
 Classification Report with best parameters : 
                precision    recall  f1-score   support
@@ -43,9 +43,7 @@ Classification Report with best parameters :
            1       1.00      0.95      0.98       149
 
     accuracy                           0.99       882
-   macro avg       1.00      0.98      0.99       882
-weighted avg       0.99      0.99      0.99       882
-
+    
 ### 3. Dashboard Deployment
 
 The dashboard are needed for user to comfortably use the platform. Dashboard are built using python Flask. The function included in dashboard are table show up, predictor, and several data visualization about the distribution of employee attrition.

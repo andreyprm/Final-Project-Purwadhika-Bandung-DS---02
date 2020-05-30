@@ -6,3 +6,4 @@ In this project I am using Employee Database of an Indian Medical Supply/Pharmac
 This project goals is to predict employee attrition or in a simple explanation, predict the probability of an employee to resign/retire from their jobs. 
 The main purpose is not to predict whether certain individual tends to leave or not.
 instead we want to create a platform for better decision making in HR policy and management based on data regarding employee attrition.
+

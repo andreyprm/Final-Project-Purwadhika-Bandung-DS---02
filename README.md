@@ -7,3 +7,4 @@ This project goals is to predict employee attrition or in a simple explanation, 
 The main purpose is not to predict whether certain individual tends to leave or not.
 instead we want to create a platform for better decision making in HR policy and management based on data regarding employee attrition.
 
+![GitHub Logo](D:/Final Project/dashboard.png)

@@ -1,4 +1,4 @@
-# Final-Project-Purwadhika-Bandung-DS---02
+# Final Project Purwadhika Data Science Bandung
 Final Project for Job Connector Data Science Program
 Prediction of Employee Attrition of a Medical Supply/Pharmaceutical Company.
 The models used in this platform in Random Forest Regressor with accuracy score around 98%.
@@ -7,4 +7,3 @@ This project goals is to predict employee attrition or in a simple explanation, 
 The main purpose is not to predict whether certain individual tends to leave or not.
 instead we want to create a platform for better decision making in HR policy and management based on data regarding employee attrition.
 
-![GitHub Logo](D:/Final Project/dashboard.png)

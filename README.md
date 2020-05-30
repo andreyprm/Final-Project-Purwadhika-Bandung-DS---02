@@ -17,6 +17,6 @@ Attrition rate.
 
 The models used in this platform in Random Forest Regressor with accuracy score around 98%. Score with original data gained score :
 
-Accuracy Score | Second Header | F! Score | Log Loss
------------- | ------------- | ------------- | -------------
-0.992063 | 0.953020 | 0.975945 | 0.274117	
+Model | Accuracy Score | Second Header | F! Score | Log Loss
+------------ | ------------ | ------------- | ------------- | -------------
+Random Forest Classifier | 0.992063 | 0.953020 | 0.975945 | 0.274117	

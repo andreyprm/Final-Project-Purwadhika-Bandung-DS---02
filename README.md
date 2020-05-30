@@ -27,4 +27,5 @@ Random Forest Classifier | 0.992063 | 0.953020 | 0.975945 | 0.274117
 ### 3. Dashboard Deployment
 
 The dashboard are needed for user to comfortably use the platform. Dashboard are built using python Flask.
-
+![GitHub Logo](/images/dashboard.png)
+Format: ![Alt Text](url)
